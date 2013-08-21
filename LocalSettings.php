@@ -137,3 +137,8 @@ $wgResourceLoaderMaxQueryLength = -1;
 require_once( "$IP/extensions/SemanticBundle/SemanticBundleSettings.php" );
 require_once( "$IP/extensions/SemanticBundle/SemanticBundle.php" );
 
+
+# 21.8.2013
+
+$wgShowExceptionDetails = true; 
+
