@@ -1,0 +1,51 @@
+<PageSchema>
+  <semanticforms_Form name="Ziel">
+    <CreateTitle>Neues Ziel</CreateTitle>
+    <EditTitle>Ziel editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Ziel" format="standard">
+    <Field name="Thema">
+      <Label>gehört zu Thema</Label>
+      <semanticmediawiki_Property name="Hat Thema">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Themen</Parameter>
+      </semanticforms_FormInput>
+      <semanticdrilldown_Filter> 
+        <Label>Thema</Label> 
+      </semanticdrilldown_Filter> 
+    </Field>
+    <Field name="Massnahme" list="list">
+      <Label>Massnahmen</Label>
+      <semanticmediawiki_Property name="Hat Massnahme">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Massnahmen</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+    <Field name="Problem" list="list">
+      <Label>Probleme</Label>
+      <semanticmediawiki_Property name="Hat Problem">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Probleme</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+    <Field name="Sektor" list="list">
+      <Label>Sektoren</Label>
+      <semanticmediawiki_Property name="Hat Sektor">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Sektoren</Parameter>
+      </semanticforms_FormInput>
+    </Field>        
+  </Template>
+</PageSchema>

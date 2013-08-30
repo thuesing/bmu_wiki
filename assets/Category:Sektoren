@@ -1,0 +1,9 @@
+<PageSchema>
+  <semanticforms_Form name="Sektor">
+    <CreateTitle>Neuen Sektor</CreateTitle>
+    <EditTitle>Sektor editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Sektor" format="standard">
+    <semanticforms_TemplateDetails/>
+  </Template>
+</PageSchema>

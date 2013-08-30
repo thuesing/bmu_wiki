@@ -1,0 +1,31 @@
+<PageSchema>
+  <semanticforms_Form name="Ursache">
+    <CreateTitle>Neue Ursache</CreateTitle>
+    <EditTitle>Ursache editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Ursache" format="standard">
+    <Field name="Thema">
+      <Label>gehört zu Thema</Label>
+      <semanticmediawiki_Property name="Hat Thema">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Themen</Parameter>
+      </semanticforms_FormInput>
+      <semanticdrilldown_Filter> 
+        <Label>Thema</Label> 
+      </semanticdrilldown_Filter> 
+    </Field>
+    <Field name="Problem">
+      <Label>Probleme</Label>
+      <semanticmediawiki_Property name="Hat Problem">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>listbox</InputType>
+        <Parameter name="values from category">Probleme</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+  </Template>
+</PageSchema>

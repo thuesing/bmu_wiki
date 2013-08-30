@@ -1,0 +1,9 @@
+<PageSchema>
+  <semanticforms_Form name="Thema">
+    <CreateTitle>Neues Thema</CreateTitle>
+    <EditTitle>Thema editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Thema" format="standard">
+    <semanticforms_TemplateDetails/>
+  </Template>
+</PageSchema>
