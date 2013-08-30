@@ -25,15 +25,15 @@ enableSemantics( parse_url( $wgServer, PHP_URL_HOST ) );
 
 # Semantic Result Formats
 # More info: http://semantic-mediawiki.org/wiki/Help:Semantic_Result_Formats#Installation
-#include_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
+include_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
 
 # Semantic Forms
 # More info: https://www.mediawiki.org/wiki/Extension:Semantic_Forms
-#include_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
+include_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 
 # Semantic Forms Inputs
 # More info: https://www.mediawiki.org/wiki/Extension:Semantic_Forms_Inputs
-#include_once( "$IP/extensions/SemanticFormsInputs/SemanticFormsInputs.php" );
+include_once( "$IP/extensions/SemanticFormsInputs/SemanticFormsInputs.php" );
 
 # Semantic Compound Queries
 # More info: https://www.mediawiki.org/wiki/Extension:Semantic_Compound_Queries
@@ -66,7 +66,7 @@ enableSemantics( parse_url( $wgServer, PHP_URL_HOST ) );
 
 # Admin Links
 # More info: https://www.mediawiki.org/wiki/Extension:Admin_Links#Installation
-#include_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
+include_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 
 # Approved Revs
 # More info: https://www.mediawiki.org/wiki/Extension:Approved_Revs#Installation
@@ -74,7 +74,7 @@ enableSemantics( parse_url( $wgServer, PHP_URL_HOST ) );
 
 # Arrays
 # More info: https://www.mediawiki.org/wiki/Extension:Arrays#Installation
-#include_once( "$IP/extensions/Arrays/Arrays.php" );
+include_once( "$IP/extensions/Arrays/Arrays.php" );
 
 # Data Transfer
 # More info: https://www.mediawiki.org/wiki/Extension:Data_Transfer#Installation
@@ -90,7 +90,7 @@ enableSemantics( parse_url( $wgServer, PHP_URL_HOST ) );
 
 # Page Schemas
 # More info: https://www.mediawiki.org/wiki/Extension:Page_Schemas#Installation
-#require_once( "$IP/extensions/PageSchemas/PageSchemas.php" );
+require_once( "$IP/extensions/PageSchemas/PageSchemas.php" );
 
 # Replace Text
 # More info: https://www.mediawiki.org/wiki/Extension:Replace_Text#Installation

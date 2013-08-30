@@ -1,0 +1,28 @@
+<PageSchema>
+  <semanticforms_Form name="Verhalten">
+    <CreateTitle>Neues Verhalten</CreateTitle>
+    <EditTitle>Verhalten editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Verhalten" format="standard">
+    <Field name="Ursache" list="list">
+      <Label>Ursachen</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Ursachen</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+    <Field name="Sektor" list="list">
+      <Label>Sektoren</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Sektoren</Parameter>
+      </semanticforms_FormInput>
+    </Field>        
+  </Template>
+</PageSchema>

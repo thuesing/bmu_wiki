@@ -142,3 +142,6 @@ require_once( "$IP/extensions/SemanticBundle/SemanticBundle.php" );
 
 $wgShowExceptionDetails = true; 
 
+# page schemas
+$wgGroupPermissions['user']['generatepages'] = true;
+

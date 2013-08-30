@@ -1,0 +1,44 @@
+<PageSchema>
+  <semanticforms_Form name="Massnahme">
+    <CreateTitle>Neue Massnahme</CreateTitle>
+    <EditTitle>Massnahme editieren</EditTitle>
+  </semanticforms_Form>
+  <Template name="Massnahme" format="standard">
+    <Field name="Thema">
+      <Label>Thema</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="Verhalten" list="list">
+      <Label>Verhalten</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Verhalten</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+    <Field name="Ziel" list="list">
+      <Label>Ziele</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Ziele</Parameter>
+      </semanticforms_FormInput>
+    </Field>
+    <Field name="Sektor" list="list">
+      <Label>Sektoren</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>two listboxes</InputType>
+        <Parameter name="values from category">Sektoren</Parameter>
+      </semanticforms_FormInput>
+    </Field>        
+  </Template>
+</PageSchema>
