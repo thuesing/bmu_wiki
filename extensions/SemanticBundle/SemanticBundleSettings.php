@@ -42,6 +42,8 @@ include_once( "$IP/extensions/SemanticFormsInputs/SemanticFormsInputs.php" );
 # Semantic Drilldown
 # More info: https://www.mediawiki.org/wiki/Extension:Semantic_Drilldown#Installation
 include_once( "$IP/extensions/SemanticDrilldown/SemanticDrilldown.php" );
+$sdgFiltersSmallestFontSize=16;
+$sdgFiltersLargestFontSize=20;
 
 # Maps and Semantic Maps 
 # If you're planning to use Google Maps or Yahoo! Maps, you should also set
