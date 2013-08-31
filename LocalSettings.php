@@ -145,3 +145,12 @@ $wgShowExceptionDetails = true;
 # page schemas
 $wgGroupPermissions['user']['generatepages'] = true;
 
+# RDF export
+
+$smwgAllowRecursiveExport = true;
+$smwgExportBacklinks = true;
+
+# Editor
+require_once "$IP/extensions/WikiEditor/WikiEditor.php";
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
