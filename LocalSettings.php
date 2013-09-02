@@ -10,6 +10,11 @@
 # Further documentation for configuration settings may be found at:
 # http://www.mediawiki.org/wiki/Manual:Configuration_settings
 
+# Get settings from our .env file.
+include("./includes/libs/Dotenv.php");
+$dir = getcwd();
+Dotenv::load($dir);
+
 # Protect against web entry
 if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
@@ -53,10 +58,10 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype           = "mysql";
-$wgDBserver         = "localhost";
-$wgDBname           = "smw";
-$wgDBuser           = "root";
-$wgDBpassword       = "root";
+$wgDBserver         = $_ENV["DB_HOST"];
+$wgDBname           = $_ENV["DB_NAME"];
+$wgDBuser           = $_ENV["DB_USER"];
+$wgDBpassword       = $_ENV["DB_PASSWORD"];
 
 # MySQL specific settings
 $wgDBprefix         = "";
