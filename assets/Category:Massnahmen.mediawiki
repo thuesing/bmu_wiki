@@ -4,13 +4,20 @@
     <EditTitle>Massnahme editieren</EditTitle>
   </semanticforms_Form>
   <Template name="Massnahme" format="standard">
-    <Field name="Thema">
-      <Label>Thema</Label>
+    <Field name="Hat Thema">
+      <Label>Hat Thema</Label>
       <semanticmediawiki_Property name="">
         <Type>Page</Type>
       </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Themen</Parameter>
+        <Parameter name="size">50</Parameter>
+        <Parameter name="mandatory"/>
+      </semanticforms_FormInput>
+      <semanticdrilldown_Filter/>
     </Field>
-    <Field name="Verhalten" list="list">
+    <Field name="Hat Verhalten" list="list">
       <Label>Verhalten</Label>
       <semanticmediawiki_Property name="">
         <Type>Page</Type>
@@ -20,7 +27,7 @@
         <Parameter name="values from category">Verhalten</Parameter>
       </semanticforms_FormInput>
     </Field>
-    <Field name="Ziel" list="list">
+    <Field name="Hat Ziel" list="list">
       <Label>Ziele</Label>
       <semanticmediawiki_Property name="">
         <Type>Page</Type>
@@ -30,7 +37,7 @@
         <Parameter name="values from category">Ziele</Parameter>
       </semanticforms_FormInput>
     </Field>
-    <Field name="Sektor" list="list">
+    <Field name="Hat Sektor" list="list">
       <Label>Sektoren</Label>
       <semanticmediawiki_Property name="">
         <Type>Page</Type>
@@ -39,6 +46,6 @@
         <InputType>two listboxes</InputType>
         <Parameter name="values from category">Sektoren</Parameter>
       </semanticforms_FormInput>
-    </Field>        
+    </Field>
   </Template>
 </PageSchema>

@@ -130,27 +130,34 @@ $wgResourceLoaderMaxQueryLength = -1;
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
-# thue
-# 13.01.22
+#
+# Start Custom Settings
+#
 
 require_once( "$IP/extensions/SemanticBundle/SemanticBundleSettings.php" );
 require_once( "$IP/extensions/SemanticBundle/SemanticBundle.php" );
 
-
-# 21.8.2013
+# thuesing
 
 $wgShowExceptionDetails = true; 
 
 # page schemas
 $wgGroupPermissions['user']['generatepages'] = true;
 
-# RDF export
-
-$smwgAllowRecursiveExport = true;
-$smwgExportBacklinks = true;
-
 # Editor
 require_once "$IP/extensions/WikiEditor/WikiEditor.php";
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+
+# API
+#$wgEnableWriteAPI = true; 
+#$wgEnableAPI = true; 
+
+# MediaWiki:Common.js
+#$wgUseSiteJs = true; 
+
+# RDF export
+#$smwgAllowRecursiveExport = true;
+#$smwgExportBacklinks = true;
+
+#require_once("$IP/extensions/DeletePagePermanently/DeletePagePermanently.php");

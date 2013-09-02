@@ -4,22 +4,22 @@
     <EditTitle>Ursache editieren</EditTitle>
   </semanticforms_Form>
   <Template name="Ursache" format="standard">
-    <Field name="Thema">
-      <Label>gehört zu Thema</Label>
-      <semanticmediawiki_Property name="Hat Thema">
+    <Field name="Hat Thema">
+      <Label>Hat Thema</Label>
+      <semanticmediawiki_Property name="">
         <Type>Page</Type>
       </semanticmediawiki_Property>
       <semanticforms_FormInput>
         <InputType>dropdown</InputType>
         <Parameter name="values from category">Themen</Parameter>
+        <Parameter name="size">50</Parameter>
+        <Parameter name="mandatory"/>
       </semanticforms_FormInput>
-      <semanticdrilldown_Filter> 
-        <Label>Thema</Label> 
-      </semanticdrilldown_Filter> 
+      <semanticdrilldown_Filter/>
     </Field>
-    <Field name="Problem">
+    <Field name="Hat Problem">
       <Label>Probleme</Label>
-      <semanticmediawiki_Property name="Hat Problem">
+      <semanticmediawiki_Property name="">
         <Type>Page</Type>
       </semanticmediawiki_Property>
       <semanticforms_FormInput>
