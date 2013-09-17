@@ -1,0 +1,13 @@
+<code>
+
+{{#arraydefine: Sektoren
+|{{#ask:[[Hat Thema::{{PAGENAME}}]] [[Hat Sektor::+]] |?Hat Sektor= |mainlabel=- |sep=, |link=none |limit=1000}} 
+|,|unique}}
+
+{{#arrayprint:Sektoren||@@@@|<nowiki/>
+ {{#set: Hat Sektor= @@@@}}
+}}
+
+{{#arrayprint: Sektoren}}
+
+</code>

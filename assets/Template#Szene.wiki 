@@ -1,0 +1,71 @@
+<noinclude> This is the "Szene" template. It should be called in the following format:
+<pre>
+{{Szene
+|StartTimeCodeTime =  
+|EndeTimeCodeTime = 
+|SzeneMaster = 
+|SzeneCopy =
+|ElanDatei =  
+|Analysetext = 
+|Positionsdiagramm = 
+|BelongsToFilm =
+|Pathoskategorie=
+}}
+</pre>
+Bearbeite diese Seite, um den Vorlagentext zu sehen.
+</noinclude>
+<includeonly>
+
+== Szene aus [[{{{BelongsToFilm}}}|{{{BelongsToFilm}}}]] ({{{StartTimeCodeTime}}} - {{{EndeTimeCodeTime}}}) ==
+
+{{#if:{{{ElanDatei|}}}|
+;ElanDatei
+:[[File:{{{ElanDatei|}}}| 150px | {{{Elan-Datei|}}}]]
+}}
+
+{{#if:{{{Analysetext|}}}|
+;Analysetext
+:[[File:{{{Analysetext|}}}| 150px | {{{Analysetext|}}}]]
+}}
+
+{{#if:{{{Positionsdiagramm|}}}|
+;Positionsdiagramm
+:[[File:{{{Positionsdiagramm|}}}| 150 px |{{{Positionsdiagramm|}}}]]
+}}
+
+;Kategorien
+:{{#arraymap:{{{Pathoskategorie|}}}|;|x|[[Pathoskategorie::x]]}}
+
+=== Ausdrucksbewegungseinheiten in {{PAGENAME}} ===
+
+{{#ask: [[BelongsToSzene::{{PAGENAME}}]] [[Category:ABEs]]
+| ?StartTimeCode =  Anfang
+| ?EndeTimeCode = Ende
+| sort = StartTimeCode
+}}
+
+{{#formlink:form=ABE|link text=ABE hinzufügen|query string=ABE[BelongsToSzene]={{PAGENAME}}&super_page={{PAGENAME}} }}
+
+{{#set: 
+| StartTimeCodeTime={{{StartTimeCodeTime|}}} 
+| EndeTimeCodeTime={{{EndeTimeCodeTime|}}} 
+| SzeneMaster={{{SzeneMaster|}}} 
+| SzeneCopy={{{SzeneCopy|}}} 
+| ElanDatei={{{ElanDatei|}}} 
+| Analysetext={{{Analysetext|}}} 
+| Positionsdiagramm={{{Positionsdiagramm|}}} 
+| BelongsToFilm={{{BelongsToFilm|}}} 
+| Szenentitel={{PAGENAME}}
+| }}
+
+<!-- SetGenreForSzene -->
+
+{{#ask: [[{{{BelongsToFilm|}}}]]|link=none
+ | ?Genre
+ | format=template
+ | template=SetGenreForSzene
+}}
+
+[[Category:Szenen]]
+
+</includeonly>

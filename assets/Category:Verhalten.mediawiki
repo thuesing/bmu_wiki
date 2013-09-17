@@ -4,6 +4,18 @@
     <EditTitle>Verhalten editieren</EditTitle>
   </semanticforms_Form>
   <Template name="Verhalten" format="standard">
+    <Field name="Hat Thema">
+      <Label>Hat Thema</Label>
+      <semanticmediawiki_Property name="">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+      <semanticforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Themen</Parameter>
+        <Parameter name="size">50</Parameter>
+        <Parameter name="mandatory"/>
+      </semanticforms_FormInput>
+    </Field>
     <Field name="Hat Ursache" list="list">
       <Label>Ursachen</Label>
       <semanticmediawiki_Property name="">
@@ -26,3 +38,8 @@
     </Field>
   </Template>
 </PageSchema>
+
+Filter für diese Kategorie: [[Has filter::Filter:Sektor]].
+
+== Beschreibung ==
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

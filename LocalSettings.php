@@ -31,7 +31,7 @@ $wgMetaNamespace = "SMW_Testdrive";
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## http://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath       = "/smw";
+$wgScriptPath       = $_ENV["SCRIPT_PATH"];
 $wgScriptExtension  = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
@@ -88,7 +88,7 @@ $wgUseInstantCommons  = true;
 ## If you use ImageMagick (or any other shell command) on a
 ## Linux server, this will need to be set to the name of an
 ## available UTF-8 locale
-$wgShellLocale = "en_US.utf8";
+$wgShellLocale = "de_DE.utf8";
 
 ## If you want to use image uploads under safe mode,
 ## create the directories images/archive, images/thumb and
@@ -102,7 +102,7 @@ $wgShellLocale = "en_US.utf8";
 #$wgCacheDirectory = "$IP/cache";
 
 # Site language code, should be one of the list in ./languages/Names.php
-$wgLanguageCode = "en";
+$wgLanguageCode = "de";
 
 $wgSecretKey = "789cc4fe3d0ccaf56cf36e91feac9dd50d97fd2efcaf91064b1df1c050c2c17e";
 
@@ -144,15 +144,35 @@ require_once( "$IP/extensions/SemanticBundle/SemanticBundle.php" );
 
 # thuesing
 
-$wgShowExceptionDetails = true; 
+$wgShowExceptionDetails = false; 
 
 # page schemas
-$wgGroupPermissions['user']['generatepages'] = true;
+#$wgGroupPermissions['user']['generatepages'] = true;
 
 # Editor
 require_once "$IP/extensions/WikiEditor/WikiEditor.php";
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+
+## Security Settings
+# anon user
+# see http://www.mediawiki.org/wiki/Manual:Preventing_access#Restrict_account_creation
+$wgGroupPermissions['*']['edit'] 		= false;
+$wgGroupPermissions['*']['createpage'] 	= false;
+$wgGroupPermissions['*']['createtalk'] 	= false;
+$wgGroupPermissions['*']['createaccount'] = false;
+# Make it so users with confirmed e-mail addresses are in the group.
+$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
+# Hide group from user list. 
+$wgImplicitGroups[] = 'emailconfirmed';
+
+# Finally, set Edit to true for the desired group.
+$wgGroupPermissions['emailconfirmed']['edit'] = true;
+$wgGroupPermissions['sysop']['edit'] = true;
+$wgGroupPermissions['bureaucrat']['edit'] = true;
+
+# renames the "edit with form" tab to "edit", and the "edit" tab to "edit source" (in whatever language the wiki is being viewed in)
+$sfgRenameEditTabs = true; 
 
 # API
 #$wgEnableWriteAPI = true; 
@@ -165,4 +185,7 @@ $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 #$smwgAllowRecursiveExport = true;
 #$smwgExportBacklinks = true;
 
-#require_once("$IP/extensions/DeletePagePermanently/DeletePagePermanently.php");
+require_once("$IP/extensions/HeaderTabs/HeaderTabs.php");
+
+$smwgShowFactbox = SMW_FACTBOX_NONEMPTY;
+

@@ -15,17 +15,21 @@
         <Parameter name="size">50</Parameter>
         <Parameter name="mandatory"/>
       </semanticforms_FormInput>
-      <semanticdrilldown_Filter/>
     </Field>
-    <Field name="Hat Problem">
+    <Field name="Hat Problem" list="list">
       <Label>Probleme</Label>
       <semanticmediawiki_Property name="">
         <Type>Page</Type>
       </semanticmediawiki_Property>
       <semanticforms_FormInput>
-        <InputType>listbox</InputType>
+        <InputType>two listboxes</InputType>
         <Parameter name="values from category">Probleme</Parameter>
       </semanticforms_FormInput>
     </Field>
   </Template>
 </PageSchema>
+
+Filter für diese Kategorie: [[Has filter::Filter:Thema]].
+
+== Beschreibung ==
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

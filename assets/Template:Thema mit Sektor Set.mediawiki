@@ -1,0 +1,53 @@
+<noinclude>
+This is the "Thema" template.
+It should be called in the following format:
+<pre>
+{{Thema}}
+</pre>
+Edit the page to see the template text.
+</noinclude><includeonly>{| class="wikitable"
+|}
+
+== Einträge zu {{PAGENAME}} ==
+{{#ask:[[Hat Thema::{{PAGENAME}}]] 
+|?Kategorie=Kategoriezugehörigkeit(en)
+|?Hat Sektor=Sektor(en)
+|format=broadtable
+|limit=50
+|link=all
+|order=asc
+|headers=show
+|mainlabel=Eintrag
+|searchlabel=… weitere Ergebnisse
+|default=Keine Einträge.
+|class=sortable wikitable smwtable
+}}
+
+
+{{#ask:[[Hat Thema::{{PAGENAME}}]] [[Hat Sektor::+]]
+|?Hat Sektor
+|format=array
+|link=none
+|headers=hide
+|mainlabel=-
+|hidegaps=none
+|name=SEKTOREN
+|sep=,
+|propsep=,
+|manysep=,
+|recordsep=,
+|headersep=,
+}}
+
+{{#arraydefine: Sektoren
+|{{#ask:[[Hat Thema::{{PAGENAME}}]] [[Hat Sektor::+]] |?Hat Sektor= |mainlabel=- |sep=, |link=none |limit=1000}} 
+|,|unique}}
+
+{{#arrayprint:Sektoren||@@@@|<nowiki/>
+ {{#set: Hat Sektor= @@@@}}
+}}
+
+
+
+[[Category:Themen]]
+</includeonly>

@@ -1,3 +1,5 @@
 assets/README
 .env
+*.env
+skins/*
 
